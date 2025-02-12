@@ -1,3 +1,4 @@
+import { GithubLogo } from '@phosphor-icons/react';
 import { Github, Linkedin, ExternalLink, Code2, Palette, Rocket, ChevronDown } from 'lucide-react';
 
 function App() {
@@ -10,21 +11,24 @@ function App() {
             description: "Sistema de CRM para clínicas médicas que facilita o cadastro de pacientes e consultas.",
             tags: ["Java", "Spring Boot", "MySQL", "TypeScript", "React", "TailwindCSS"],
             image: "https://i.imgur.com/wUHcxlN.jpg",
-            link: "https://github.com/Projeto-Integrador-grupo-4-Modelo/inovamed_frontend"
+            link: "https://inovamed-xi.vercel.app/",
+            codigo: "https://github.com/Projeto-Integrador-grupo-4-Modelo"
         },
         {
             title: "Blog Pessoal",
             description: "Blog interativo que possibilita o cadastro de postagens.",
             tags: ["Java", "Spring Boot", "MySQL", "TypeScript", "React", "TailwindCSS"],
             image: "https://i.imgur.com/w0JVYOT.png",
-            link: "https://github.com/Kemilly-fgnds/blogpessoalreact"
+            link: "https://blogpessoalreact-eta.vercel.app/",
+            codigo: "https://github.com/Projeto-Integrador-grupo-4-Modelo"
         },
         {
             title: "Sistema de RH",
             description: "Sistema de Recursos Humanos que facilita a gestão e controle de funcionários.",
             tags: ["TypeScript", "React", "TailwindCSS"],
             image: "https://i.imgur.com/0bHeza6.png",
-            link: "https://github.com/Projeto-Integrador-grupo-4-Modelo/rh-frontend/tree/main"
+            link: "https://github.com/Projeto-Integrador-grupo-4-Modelo/rh-frontend/tree/main",
+            codigo: "https://github.com/Projeto-Integrador-grupo-4-Modelo/rh-frontend/tree/main"
         }
     ];
 
@@ -38,7 +42,7 @@ function App() {
                         </h1>
 
                         <p className="text-2xl text-pink-200/80">
-                            Desenvolvedora Full Stack
+                            Desenvolvedora FullStack
                         </p>
 
                         <div className="flex justify-center space-x-6 pt-8">
@@ -77,9 +81,10 @@ function App() {
                                     com certificação Microsoft Azure-900 e certificado em AWS Cloud e Inteligência Artificial.
                                     Possuo experiência em suporte técnico e rotinas administrativas.
                                     Atualmente, estou em transição para a área de tecnologia, com foco em Desenvolvimento Fullstack,
-                                    e recentemente concluí o bootcamp de Desenvolvimento Fullstack Java pela Generation Brasil.
-                                    Sou uma pessoa comunicativa, que trabalha bem em equipe e aprende rapidamente novas tecnologias.
-                                    Tenho um pensamento analítico e criativo, além de ser persistente na busca por soluções eficientes.
+                                    e recentemente concluí o bootcamp de Desenvolvimento Fullstack Java pela Generation Brasil com carga
+                                    horária de 480h. Sou uma pessoa comunicativa, que trabalha bem em equipe e aprende rapidamente novas
+                                    tecnologias. Tenho um pensamento analítico e criativo, além de ser persistente na busca por soluções
+                                    eficientes.
                                 </p>
                             </div>
                         </div>
@@ -114,7 +119,7 @@ function App() {
                             <Rocket className="w-12 h-12 mb-6 text-fuchsia-500" />
                             <h3 className="text-2xl font-bold mb-4 text-pink-100">Computação em Nuvem</h3>
                             <p className="text-gray-400">Azure-900.</p>
-                            <p className="text-gray-400">AWS Cloud Practitioner Foundational.</p>
+                            <p className="text-gray-400">AWS Cloud.</p>
                             <p className="text-gray-400">AI-900.</p>
                         </div>
                     </div>
@@ -146,54 +151,25 @@ function App() {
                                             </span>
                                         ))}
                                     </div>
-                                    <a
-                                        href={project.link}
-                                        className="inline-flex items-center text-fuchsia-600 hover:text-fuchsia-600 transition-colors"
-                                    >
-                                        Ver projeto <ExternalLink size={16} className="ml-2" />
-                                    </a>
+                                    <div className="flex flex-col gap-2">
+                                        <a
+                                            href={project.link}
+                                            target="_blank"
+                                            className="inline-flex items-center text-fuchsia-600 hover:text-fuchsia-600 hover:underline transition-colors"
+                                        >
+                                            Ver projeto <ExternalLink size={16} className="ml-2" />
+                                        </a>
+                                        <a
+                                            href={project.codigo}
+                                            target="_blank"
+                                            className="inline-flex items-center text-fuchsia-600 hover:text-fuchsia-600 hover:underline transition-colors"
+                                        >
+                                            Código-fonte <GithubLogo size={16} className="ml-2" />
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         ))}
-                    </div>
-                </div>
-            </section>
-
-            <section className="py-32">
-                <div className="container mx-auto px-4">
-                    <div className="max-w-2xl mx-auto bg-gray-900/50 backdrop-blur-lg rounded-2xl p-12 neon-border">
-                        <h2 className="text-4xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-fuchsia-600">
-                            Vamos Conversar
-                        </h2>
-                        <form className="space-y-6">
-                            <div>
-                                <input
-                                    type="text"
-                                    placeholder="Nome"
-                                    className="w-full px-6 py-4 rounded-lg bg-gray-800/50 border border-fuchsia-900/50 text-white placeholder-gray-400 focus:outline-none focus:border-fuchsia-400 transition-colors"
-                                />
-                            </div>
-                            <div>
-                                <input
-                                    type="email"
-                                    placeholder="Email"
-                                    className="w-full px-6 py-4 rounded-lg bg-gray-800/50 border border-fuchsia-900/50 text-white placeholder-gray-400 focus:outline-none focus:border-fuchsia-400 transition-colors"
-                                />
-                            </div>
-                            <div>
-                                <textarea
-                                    placeholder="Mensagem"
-                                    rows={4}
-                                    className="w-full px-6 py-4 rounded-lg bg-gray-800/50 border border-fuchsia-900/50 text-white placeholder-gray-400 focus:outline-none focus:border-fuchsia-400 transition-colors"
-                                ></textarea>
-                            </div>
-                            <button
-                                type="submit"
-                                className="w-full py-4 px-8 rounded-lg bg-gradient-to-r from-pink-500 to-fuchsia-600 text-white font-semibold hover:from-pink-400 hover:to-fuchsia-700 transition-colors"
-                            >
-                                Enviar mensagem
-                            </button>
-                        </form>
                     </div>
                 </div>
             </section>
